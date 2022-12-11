@@ -1,0 +1,256 @@
+/* a 링크 태그 스타일 초기화 */
+* {
+  box-sizing: border-box;
+  cursor: url('/img/cursor.cur'), auto;
+}
+
+body {
+  margin: 0 auto;
+  color: #3f464d;
+  font-family: "Spoqa Han Sans Neo", "Sans-serif";
+  cursor: url('/img/cursor.cur'), auto;
+}
+
+a {
+  all: unset;
+  font-size: 35px;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 20px;
+  font-family: 'East Sea Dokdo', cursive;
+}
+
+a:link {
+  text-decoration: none;
+  color: #3f464d;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #3f464d;
+}
+
+a:active {
+  text-decoration: none;
+  color: #3f464d;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #3f464d;
+}
+
+.inner {
+  /* width: 100%; */
+  /* 가로 사이즈가 1200px 넘는 해상도에서는 max-width 설정 */
+  height: 100%;
+  /* align-items 등으로 수직 가운데 정렬을 위해, 알맞은 height 설정이 필요함 */
+  margin: 0 auto;
+  /* 가운데 정렬: 동일 요소에 width 가 설정되어 있을 때에만 적용 */
+  padding: 0.5rem 2rem;
+  /* 좌우 padding 을 살짝 주어서, 좌우에 딱 붙지 않도록 함 */
+  overflow: hidden;
+  align-items: center;
+}
+
+.header2 {
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+}
+
+.head-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 필요시 세부 설정을 위해, 상단 좌측 브랜드만을 별도로 클래스로 정의 */
+.head-container .head-brand {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.head-container .head-brand a:hover {
+  color: #2186c4;
+  cursor: pointer;
+}
+
+/* 필요시 세부 설정을 위해, 상단 우측 메뉴만을 별도로 클래스로 정의 */
+.head-container .head-blog {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.head-container .head-blog a:hover {
+  color: #2186c4;
+  cursor: pointer;
+}
+
+section {
+  width: 100%;
+  background-color: #fff;
+  position: relative;
+}
+.main {
+  height: 400px;
+  /* 화면 이미지 고정 */
+  background-image: url("../img/concert.jpg");
+  background-size: cover;
+  background-position: center 30%;
+  /* 이미지 위치를 살짝 위로 올리기 위한 position 설정 */
+  background-repeat: no-repeat;
+  opacity: 1;
+  z-index: 2;
+}
+
+/* 배경 이미지에 색상을 어둡게 하기 위해, 어두운 색상으로 이미지 상위에 투명도를 주어 덮어씌움 */
+.main-container {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0.6;
+  z-index: -1;
+  margin-top: 60px;
+  /* position 이 fixed 일 경우, 문서 흐름에서 빠지므로, 이 부분은 margin 으로 적용 */
+}
+
+.title-container {
+  padding: 90px;
+  align-items: center;
+  text-align: center
+
+}
+
+.head-container.head-blog2{
+  font-size: 20px;
+  font-weight: bold;
+}
+.title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: black
+  /* margin-bottom: 0.8rem; */
+  /* z-index: 2; */
+  /* -webkit-text-stroke: 3px rgb(48, 48, 32); */
+}
+
+.message {
+  margin-top: 17px;
+  font-size: 1.1rem;
+  font-weight: normal;
+  color: black
+  /* line-height: 2rem; */
+  /* -webkit-text-stroke: 1px rgb(48, 48, 32); */
+}
+.de-container{
+  /* padding: 50px; */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* max-width: 1200px; */
+  /* align-items: center; */
+  margin-left: 150px;
+  margin-right: 150px;
+  
+}
+.de-title{
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  text-align: center;
+}
+.de-me{
+  position: relative;
+  display: block;
+  /* padding-left: 37px; */
+  padding-bottom: 15px;
+  font-size: 15px;
+  color: #3f464d;
+  line-height: 2;
+
+  
+}
+.waveimg{
+  margin-left: 300px;
+  margin-right: 100px;
+  /* justify-content: space-between; */
+}
+
+footer {
+  border-top: 1px solid #e4e4e4;
+  background-color: #f8f9fa;
+  padding: 1rem 0;
+  margin: 6rem 0;
+  margin-bottom: 0;
+  height: 150px;
+}
+
+.footer-message {
+  font-weight: bold;
+  color: #545e6f;
+  margin-bottom: 0.3rem 0.5rem;
+  text-align: center;
+}
+
+.footer-contact {
+  /* font-weight: bold; */
+  margin-top: 10px;
+  margin-bottom: 0. 0.5rem;
+  color: #545e6f;
+  text-align: center;
+}
+
+#backtotop {
+  background-color: rgb(47, 48, 89);
+  width: 40px;
+  height: 40px;
+  text-align: center;
+
+  border-radius: 20px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition-property: background-color, opacity, visibility;
+  transition-duration: 0.3s 0.3s 0.3s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 99;
+}
+
+#backtotop::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-size: 1.5rem;
+  line-height: 40px;
+  color: white;
+}
+
+#backtotop.show {
+  opacity: 1;
+  visibility: visible;
+  background-color: rgb(47, 48, 89);
+}
+
+#backtotop.show:hover {
+  cursor: pointer;
+  background-color: #2186c4;
+}
+
+#google_translate_element{
+  padding: 20px;
+}
+
+
+@media only screen and (min-width: 1200px) {
+  .inner {
+    max-width: 1200px;
+  }
+}
