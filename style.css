@@ -1,0 +1,393 @@
+* {
+  box-sizing: border-box;
+  cursor: url('/img/cursor.cur'), auto;
+}
+
+body {
+  margin: 0 auto;
+  color: #3f464d;
+  font-family: "Spoqa Han Sans Neo", "Sans-serif";
+  cursor: url('/img/cursor.cur'), auto;
+}
+
+/* a 링크 태그 스타일 초기화 */
+a {
+  all: unset;
+  font-size: 42px;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: 'East Sea Dokdo', cursive;
+}
+
+a:link {
+  text-decoration: none;
+  color: #3f464d;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #3f464d;
+}
+
+a:active {
+  text-decoration: none;
+  color: #3f464d;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #3f464d;
+}
+
+.inner {
+  /* width: 100%; */
+  /* 가로 사이즈가 1200px 넘는 해상도에서는 max-width 설정 */
+  height: 100%;
+  /* align-items 등으로 수직 가운데 정렬을 위해, 알맞은 height 설정이 필요함 */
+  margin: 0 auto;
+  /* 가운데 정렬: 동일 요소에 width 가 설정되어 있을 때에만 적용 */
+  padding: 0.5rem 2rem;
+  /* 좌우 padding 을 살짝 주어서, 좌우에 딱 붙지 않도록 함 */
+  overflow: hidden;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  
+}
+
+.head-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+/* 필요시 세부 설정을 위해, 상단 좌측 브랜드만을 별도로 클래스로 정의 */
+.head-container .head-brand {
+  font-weight: bold;
+  font-size: 45px;
+  font-family: 'East Sea Dokdo', cursive;
+}
+
+.head-container .head-brand a:hover {
+  color: #2186c4;
+  cursor: pointer;
+}
+
+/* 필요시 세부 설정을 위해, 상단 우측 메뉴만을 별도로 클래스로 정의 */
+.head-container .head-blog {
+  font-weight: bold;
+  font-size: 50px;
+  font-family: 'East Sea Dokdo', cursive;
+}
+
+.head-container .head-blog a:hover {
+  color: #2186c4;
+  cursor: pointer;
+}
+
+
+section {
+  width: 100%;
+  background-color: #fff;
+  position: relative;
+}
+
+.main {
+  height: 400px;
+  /* 화면 이미지 고정 */
+  background-image: url("../img/city.jpg");
+  background-size: cover;
+  background-position: center 20%;
+  /* 이미지 위치를 살짝 위로 올리기 위한 position 설정 */
+  background-repeat: no-repeat;
+  opacity: 1;
+  z-index: 2;
+}
+
+/* 배경 이미지에 색상을 어둡게 하기 위해, 어두운 색상으로 이미지 상위에 투명도를 주어 덮어씌움 */
+.main-container {
+  width: 100%;
+  height: 100%;
+  background-color: #3f464d; 
+  opacity: 0.6;
+  z-index: -1;
+  margin-top: 60px;
+  /* position 이 fixed 일 경우, 문서 흐름에서 빠지므로, 이 부분은 margin 으로 적용 */
+}
+
+.title-container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  margin-bottom: 0.8rem;
+  z-index:2 ;
+  font-family: 'Noto Sans KR', sans-serif;
+  /* -webkit-text-stroke: 3px rgb(48, 48, 32); */
+}
+
+.message {
+  font-size: 1.1rem;
+  font-weight: normal;
+  color: white;
+  line-height: 2rem;
+  /* -webkit-text-stroke: 1px rgb(48, 48, 32); */
+}
+
+.skill-container{
+  width: 100%;
+  height: 150%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.skill{
+  width: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  border-radius: 9px;
+  padding: 0.5rem 1rem;
+  margin: 0 1rem;
+  box-shadow: 8px 8px 2px -1px rgba(25, 42, 70, .2);
+  transition: 0.7s;
+  margin:20px 40px 0 0;
+
+}
+.skill:hover {
+  transform: translate(0 , -5px);
+  cursor: pointer;
+}
+
+.skill-icon{
+  font-size: 2rem;
+  margin: 0 7px;
+}
+.skill-title{
+  /* margin: 0 1rem; */
+  display: flex;
+  flex-direction: column;
+  align-content:center;
+  margin-left: 30px;
+}
+.skill-name{
+  font-weight: bold;
+  color: #3f464d;
+  margin-bottom: 0.2rem;
+  align-content: center;
+}
+.skill-name:hover{
+  cursor: pointer;
+}
+.skill-icon:hover{
+  cursor: pointer;
+}
+/* .skill-usage{
+  font-size: 0.9rem;
+  color: #3f464d;
+} */
+
+
+.roadmap-container{
+  width: 100%;
+  margin-top:2rem;
+  margin-right: 0;
+}
+.roadmap-title-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.roadmap-title{
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #545;
+}
+
+.slide-left{
+  font-size: 2rem;
+  cursor: prointer;
+  color: rgb(47,48,89);
+}
+
+.slide-right{
+  font-size: 2rem;
+  cursor: prointer;
+
+}
+
+.mu-list{
+  display:flex;
+  list-style: none;
+  padding: 1rem 0;
+  margin: 0 0 0 0;
+  overflow: hidden;
+}
+.mu-card{
+  width: 180px;
+  box-shadow: 8px 8px 2px -1px rgba(25, 42, 70, .2);
+  border-radius: 14px;
+  margin: 0 20px;
+  transition: 0.4s;
+}
+.mu-card:hover{
+  box-shadow: 8px 8px 2px 0px rgba(25, 42, 70, .2);
+  transform: translate(0,-5px);
+  cursor: pointer;
+}
+.mu-card-img{
+  width: 180px;
+  border-radius: 14px 14px 0 0 ;
+  height:200px ;
+}
+.mu-card-img:hover {
+  
+  cursor: pointer;
+}
+#img-size{
+  width: 200px;
+}
+
+.mu-skill:hover{
+  cursor: pointer;
+}
+.mu-container{
+  width: 200%;
+  padding: 0.5rem 1rem 1rem 1rem;
+
+}
+.mu-skill{
+  display: flex;
+  justify-content: space-between;
+  align-items:center ;
+
+}
+
+.mu-songpart{
+  width: 100%;
+  margin-top: 5px;
+}
+
+.mu-songtitle{
+  font-size: 14px;
+  font-weight: bold;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 10px;
+}
+.mu-songdetail{
+  font-size: 0.6rem;
+
+}
+.mu-type {
+  font-size: 11px;
+  color: grey;
+  margin-top: 8px;
+}
+footer{
+  border-top:1px solid #e4e4e4 ;
+  background-color: #f8f9fa;
+  padding: 1rem 0;
+  margin-top: 70px;
+  margin-bottom:  0;
+  height: 150px;
+}
+
+.footer-message{
+  font-weight: bold;
+  color: #545e6f;
+  margin-bottom: 0.3rem 0.5rem;
+  text-align: center;
+}
+
+.footer-contact{
+  /* font-weight: bold; */
+  margin-top: 10px;
+  margin-bottom: 0. 0.5rem;
+  color: #545e6f;
+  text-align: center;
+}
+
+
+
+#backtotop{
+  background-color: rgb(47,48,89);
+  width: 40px;
+  height: 40px;
+  text-align: center;
+
+  border-radius:20px ;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition-property: background-color,opacity,visibility;
+  transition-duration: 0.3s 0.3s 0.3s; 
+  opacity: 0;
+  visibility: hidden;
+  z-index: 99;
+}
+
+#backtotop::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-size: 1.5rem;
+  line-height: 40px;
+  color: white;
+}
+
+#backtotop.show{
+  opacity: 1;
+  visibility: visible;
+  background-color: rgb(47, 48, 89);
+}
+#backtotop.show:hover{
+  cursor: pointer;
+  background-color: #2186c4;
+}
+
+@media only screen and (min-width: 1200px) {
+  .inner {
+    max-width: 1200px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .skill-container{
+    display: none;
+  }
+}
+
+
+.p {
+  margin-top: 10px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.display {
+  padding-left: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+
+}
+
